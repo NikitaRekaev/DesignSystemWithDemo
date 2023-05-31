@@ -58,6 +58,7 @@ whitelist_rules:
     - void_return
 
 disabled_rules: # rule identifiers to exclude from running
+    - blanket_disable_command
 
 excluded: # paths to ignore during linting. Takes precedence over `included`.
     - Example/Pods
