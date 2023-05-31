@@ -53,7 +53,7 @@ public final class ColorAsset {
   #if os(iOS) || os(tvOS)
   @available(iOS 11.0, tvOS 11.0, *)
   public func color(compatibleWith traitCollection: UITraitCollection) -> Color {
-    let bundle = Bundle.module
+    let bundle = Bundle.main
     guard let color = Color(named: name, in: bundle, compatibleWith: traitCollection) else {
       fatalError("Unable to load color asset named \(name).")
     }
@@ -76,7 +76,7 @@ public final class ColorAsset {
 public extension ColorAsset.Color {
   @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *)
   convenience init?(asset: ColorAsset) {
-    let bundle = Bundle.module
+    let bundle = Bundle.main
     #if os(iOS) || os(tvOS)
     self.init(named: asset.name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
@@ -91,7 +91,7 @@ public extension ColorAsset.Color {
 @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
 public extension SwiftUI.Color {
   init(asset: ColorAsset) {
-    let bundle = Bundle.module
+    let bundle = Bundle.main
     self.init(asset.name, bundle: bundle)
   }
 }
@@ -108,7 +108,7 @@ public struct ImageAsset {
 
   @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.7, *)
   public var image: Image {
-    let bundle = Bundle.module
+    let bundle = Bundle.main
     #if os(iOS) || os(tvOS)
     let image = Image(named: name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
@@ -126,7 +126,7 @@ public struct ImageAsset {
   #if os(iOS) || os(tvOS)
   @available(iOS 8.0, tvOS 9.0, *)
   public func image(compatibleWith traitCollection: UITraitCollection) -> Image {
-    let bundle = Bundle.module
+    let bundle = Bundle.main
     guard let result = Image(named: name, in: bundle, compatibleWith: traitCollection) else {
       fatalError("Unable to load image asset named \(name).")
     }
@@ -148,7 +148,7 @@ public extension ImageAsset.Image {
     message: "This initializer is unsafe on macOS, please use the ImageAsset.image property")
   convenience init?(asset: ImageAsset) {
     #if os(iOS) || os(tvOS)
-    let bundle = Bundle.module
+    let bundle = Bundle.main
     self.init(named: asset.name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
     self.init(named: NSImage.Name(asset.name))
@@ -162,17 +162,17 @@ public extension ImageAsset.Image {
 @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
 public extension SwiftUI.Image {
   init(asset: ImageAsset) {
-    let bundle = Bundle.module
+    let bundle = Bundle.main
     self.init(asset.name, bundle: bundle)
   }
 
   init(asset: ImageAsset, label: Text) {
-    let bundle = Bundle.module
+    let bundle = Bundle.main
     self.init(asset.name, bundle: bundle, label: label)
   }
 
   init(decorative asset: ImageAsset) {
-    let bundle = Bundle.module
+    let bundle = Bundle.main
     self.init(decorative: asset.name, bundle: bundle)
   }
 }

@@ -1,31 +1,31 @@
 strings:
   inputs:
-    - Sources/Resources/Localizable.strings
+    - Resources/Localizable.strings
   outputs:
     - templateName: structured-swift5
-      output: Sources/Resources/Generated/Localizable.swift
+      output: Sources/Generated/Localizable.swift
       params:
           publicAccess: true
-          bundle: Bundle.module
+          bundle: Bundle.main
           enumName: Localizable
 fonts:
   inputs:
-    - Sources/Resources/Fonts
+    - Resources/Fonts
   outputs:
     templateName: swift5
-    output: Sources/Resources/Generated/Fonts.swift
+    output: Sources/Generated/Fonts.swift
     params:
         publicAccess: true
-        bundle: Bundle.module
+        bundle: Bundle.main
         enumName: Fonts
 xcassets:
   inputs:
-    - Sources/Resources/Assets.xcassets
+    - Resources/Assets.xcassets
   outputs:
     - templateName: swift5
       params:
          publicAccess: true
-         bundle: Bundle.module
+         bundle: Bundle.main
          enumName: Assets
          forceProvidesNamespaces: true
-      output: Sources/Resources/Generated/Assets.swift
+      output: Sources/Generated/Assets.swift
