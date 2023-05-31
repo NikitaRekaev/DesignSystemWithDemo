@@ -1,0 +1,57 @@
+name: UIComponent
+
+## options section ##
+
+options:
+  bundleIdPrefix: com.UIComponent
+  deploymentTarget:
+    iOS: 13.0
+  groupSortPosition: top
+  generateEmptyDirectories: true
+  minimumXcodeGenVersion: '2.18.0'
+  packages:
+    SnapKit:
+        url: "https://github.com/SnapKit/SnapKit.git"
+        from: "5.0.1"
+
+## targets section ##
+        
+targets:
+  UIComponent:
+    dependencies:
+        - package: SnapKit
+        - sdk: UIKit.framework
+    type: framework
+    platform: iOS
+    deploymentTarget: 13.0
+    info:
+      path: ../UIComponent/Info.plist
+      properties:
+        Fonts provided by application: [regular.OTF, bold.OTF, medium.OTF]
+    settings:
+      base:
+        MARKETING_VERSION: 1.0
+    sources:
+       - path: ../UIComponent
+    preBuildScripts:
+      - name: Run SwiftLint
+        basedOnDependencyAnalysis: false
+        script: |
+                export PATH="$PATH:/opt/homebrew/bin"
+
+                if which swiftlint > /dev/null; then
+                    swiftlint && swiftlint --fix
+                else
+                    echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+                fi
+    postCompileScripts:
+       - name: Run SwiftGen
+         basedOnDependencyAnalysis: false
+         script: |
+                export PATH="$PATH:/opt/homebrew/bin"
+
+                if which swiftgen >/dev/null; then
+                    swiftgen
+                else
+                    echo "warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen"
+                fi
