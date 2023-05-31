@@ -1,0 +1,25 @@
+strings:
+  inputs:
+    - Sources/Resources/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: Sources/Resources/Localizable.swift
+      params:
+         enumName: Localizable
+fonts:
+  inputs:
+    - Sources/Resources/Fonts
+  outputs:
+    templateName: swift5
+    output: Sources/Resources/Fonts.swift
+    params:
+         enumName: Fonts
+xcassets:
+  inputs:
+    - Sources/Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      params:
+         enumName: Assets
+         forceProvidesNamespaces: true
+      output: Sources/Resources/Assets.swift
