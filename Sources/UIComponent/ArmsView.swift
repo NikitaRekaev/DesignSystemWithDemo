@@ -2,6 +2,7 @@
 //  Nikita Rekaev 30.05.2023
 
 import UIKit
+import SnapKit
 
 public class ArmsView: UIView {
 
@@ -13,15 +14,9 @@ public class ArmsView: UIView {
 
     public override func layoutSubviews() {
         super.layoutSubviews()
-        addSubview(imageView)
-
-        imageView.translatesAutoresizingMaskIntoConstraints = true
-
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: self.topAnchor),
-            imageView.leftAnchor.constraint(equalTo: self.leftAnchor),
-            imageView.rightAnchor.constraint(equalTo: self.rightAnchor),
-            imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-        ])
+        self.addSubview(imageView)
+        imageView.snp.makeConstraints { make in
+            make.top.bottom.left.right.equalToSuperview()
+        }
     }
 }

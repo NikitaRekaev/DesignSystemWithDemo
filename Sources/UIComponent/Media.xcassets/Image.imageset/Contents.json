@@ -1,11 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Coat_of_Arms_of_Spain.svg.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
+      "filename" : "Coat_of_Arms_of_Spain.svg 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -14,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "Coat_of_Arms_of_Spain.svg 1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
