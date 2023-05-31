@@ -8,7 +8,7 @@ public class ArmsView: UIView {
 
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = Resource.armsImage
+//        imageView.image = Resources.armsImage
         return imageView
     }()
 

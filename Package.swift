@@ -19,7 +19,9 @@ let package = Package(
     targets: [
         .target(
             name: "UIComponent",
-            dependencies: ["SnapKit"]),
+            dependencies: ["SnapKit"],
+            path: "Sources"
+        ),
         .testTarget(
             name: "UIComponentTests",
             dependencies: ["UIComponent"]),
