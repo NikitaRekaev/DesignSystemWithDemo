@@ -12,11 +12,8 @@ import Foundation
 public enum Localizable {
   /// Bye
   public static let bye = Localizable.tr("Localizable", "bye", fallback: "Bye")
-  /// Localizable.strings
-  ///   
-  /// 
-  ///   Created by Nikita Rekaev on 31.05.2023.
-  public static let hello = Localizable.tr("Localizable", "hello", fallback: "hello")
+  /// en
+  public static let hello = Localizable.tr("Localizable", "hello", fallback: "Hello")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

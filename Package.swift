@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "DesignSystem",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v13)
     ],
@@ -27,7 +28,9 @@ let package = Package(
                 .process("Resources/Fonts/Inter-Bold.ttf"),
                 .process("Resources/Fonts/Inter-Medium.ttf"),
                 .process("Resources/Fonts/Inter-Regular.ttf"),
-                .process("Resources/Fonts/Inter-SemiBold.ttf")
+                .process("Resources/Fonts/Inter-SemiBold.ttf"),
+                .process("Resources/en.lproj"),
+                .process("Resources/ru.lproj")
             ],
             swiftSettings: [.define("SwiftLintPlugin")],
             plugins: [.plugin(name: "SwiftLint", package: "SwiftLintPlugin")]

@@ -1,6 +1,6 @@
 strings:
   inputs:
-    - Sources/Resources/Localizable.strings
+    - Sources/Resources/en.Iproj
   outputs:
     - templateName: structured-swift5
       output: Sources/Generated/Localizable.swift
