@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "UIComponent",
+    name: "DesignSystem",
     platforms: [
         .iOS(.v13)
     ],
     products: [
         .library(
-            name: "UIComponent",
-            targets: ["UIComponent"])
+            name: "DesignSystem",
+            targets: ["DesignSystem"])
     ],
     dependencies: [
         .package(url: "https://github.com/lukepistrol/SwiftLintPlugin", from: "0.2.2"),
@@ -19,10 +19,9 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "UIComponent",
+            name: "DesignSystem",
             dependencies: ["SnapKit"],
             path: "Sources",
-            //            sources: ["Generated", "UIComponent"],
             resources: [
                 .process("Resources/Fonts/Inter-Bold.ttf"),
                 .process("Resources/Fonts/Inter-Medium.ttf"),
@@ -32,7 +31,7 @@ let package = Package(
             swiftSettings: [.define("SwiftLintPlugin")], plugins: [.plugin(name: "SwiftLint", package: "SwiftLintPlugin")]
         ),
         .testTarget(
-            name: "UIComponentTests",
-            dependencies: ["UIComponent"])
+            name: "DesignSystemTests",
+            dependencies: ["DesignSystem"])
     ]
 )
