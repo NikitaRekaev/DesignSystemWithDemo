@@ -22,8 +22,13 @@ let package = Package(
             name: "UIComponent",
             dependencies: ["SnapKit"],
             path: "Sources",
-//            sources: ["Generated", "UIComponent"],
-            resources: [.process("Resources/Fonts")],
+            //            sources: ["Generated", "UIComponent"],
+            resources: [
+                .process("Resources/Fonts/Inter-Bold.ttf"),
+                .process("Resources/Fonts/Inter-Medium.ttf"),
+                .process("Resources/Fonts/Inter-Regular.ttf"),
+                .process("Resources/Fonts/Inter-SemiBold.ttf")
+            ],
             swiftSettings: [.define("SwiftLintPlugin")], plugins: [.plugin(name: "SwiftLint", package: "SwiftLintPlugin")]
         ),
         .testTarget(
