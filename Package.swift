@@ -23,7 +23,7 @@ let package = Package(
             dependencies: ["SnapKit"],
             path: "Sources",
 //            sources: ["Generated", "UIComponent"],
-//            resources: [.process("Resources")],
+            resources: [.process("Resources/Fonts")],
             swiftSettings: [.define("SwiftLintPlugin")], plugins: [.plugin(name: "SwiftLint", package: "SwiftLintPlugin")]
         ),
         .testTarget(
