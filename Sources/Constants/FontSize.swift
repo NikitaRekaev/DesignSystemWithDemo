@@ -4,5 +4,5 @@
 import Foundation
 
 public struct FontSize {
-    public static let large: CGFloat = 40
+    public static let large = .screenHeight / 20.3
 }
