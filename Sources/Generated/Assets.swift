@@ -29,6 +29,7 @@ public enum Assets {
   public static let blue = ColorAsset(name: "blue")
   public static let goose = ImageAsset(name: "goose")
   public static let red = ColorAsset(name: "red")
+  public static let yellow = ColorAsset(name: "yellow")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
