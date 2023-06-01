@@ -91,7 +91,7 @@ public struct FontConvertible {
 
   fileprivate var url: URL? {
     // swiftlint:disable:next implicit_return
-    return Bundle.main.url(forResource: path, withExtension: nil)
+    return Bundle.module.url(forResource: path, withExtension: nil)
   }
 }
 

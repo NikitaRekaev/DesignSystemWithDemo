@@ -6,7 +6,7 @@ strings:
       output: Sources/Generated/Localizable.swift
       params:
           publicAccess: true
-          bundle: Bundle.main
+          bundle: Bundle.module
           enumName: Localizable
 fonts:
   inputs:
@@ -16,7 +16,7 @@ fonts:
     output: Sources/Generated/Fonts.swift
     params:
         publicAccess: true
-        bundle: Bundle.main
+        bundle: Bundle.module
         enumName: Fonts
 xcassets:
   inputs:
@@ -25,7 +25,7 @@ xcassets:
     - templateName: swift5
       params:
          publicAccess: true
-         bundle: Bundle.main
+         bundle: Bundle.module
          enumName: Assets
          forceProvidesNamespaces: true
       output: Sources/Generated/Assets.swift
