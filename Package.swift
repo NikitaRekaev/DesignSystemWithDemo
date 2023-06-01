@@ -11,7 +11,8 @@ let package = Package(
     products: [
         .library(
             name: "DesignSystem",
-            targets: ["DesignSystem"])
+            targets: ["DesignSystem"]
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/lukepistrol/SwiftLintPlugin", from: "0.2.2"),
@@ -28,10 +29,12 @@ let package = Package(
                 .process("Resources/Fonts/Inter-Regular.ttf"),
                 .process("Resources/Fonts/Inter-SemiBold.ttf")
             ],
-            swiftSettings: [.define("SwiftLintPlugin")], plugins: [.plugin(name: "SwiftLint", package: "SwiftLintPlugin")]
+            swiftSettings: [.define("SwiftLintPlugin")],
+            plugins: [.plugin(name: "SwiftLint", package: "SwiftLintPlugin")]
         ),
         .testTarget(
             name: "DesignSystemTests",
-            dependencies: ["DesignSystem"])
+            dependencies: ["DesignSystem"]
+        )
     ]
 )
