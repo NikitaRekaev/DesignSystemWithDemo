@@ -9,4 +9,5 @@ public struct Constants {
     /// Equal 200px for iPhone 13 mini
     public static let largeSide = .screenHeight / 4.06
     /// test
+    public static let test = 20
 }
